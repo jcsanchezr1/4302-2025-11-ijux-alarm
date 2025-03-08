@@ -1,0 +1,122 @@
+.login-title-container {
+  font-family: 'Arial Black';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 54px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.login-container {
+  display: flex;
+  text-align: center;    
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 72px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 38.5px; 
+  width: 328px; 
+}
+
+.input-container label {
+  position: absolute;
+  top: -7px;
+  left: 20px;
+  background: #4b217e;
+  padding: 0 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff; 
+}
+
+.input-container label span {
+  color: #FFFF00; 
+}
+
+.input-container input {
+  width: 100%; 
+  padding: 15px;
+  border: 1px solid #FFFF00; 
+  border-radius: 7px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: #ffd700;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 43px;
+}
+
+.btn {
+  width: 264px;
+  height: 36px;
+  background-color: #FFC0CB;
+  color: #4F2380;
+  border: 1px solid #000000;  
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #FF69B4;
+}
+
+.btn:active {
+  background-color: #FF91A4;
+}
+
+.btn:disabled {
+  background-color: #F0D8DA;
+  cursor: not-allowed;
+}
+
+.forgot-password {
+  margin-top: 74px;
+  text-align: center;
+}
+
+.forgot-password a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 100; 
+  color: #FFFFFF;
+  text-decoration: underline; 
+  text-underline-offset: 2px; 
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+small {
+  color: #FFA500;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 12px; 
+  font-weight: 400; 
+  text-align: left; 
+  padding-left: 10px; 
+  display: block; 
+}

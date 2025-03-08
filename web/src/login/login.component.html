@@ -1,0 +1,35 @@
+<div class="login-title-container">
+  <span>IJUX<br>ALARM</span>
+</div>
+
+<div class="login-container">   
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="input-container">
+      <label for="email"><span>*</span>Correo</label>
+      <input id="email" type="email" formControlName="email" placeholder=" " />
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+        <small *ngIf="loginForm.get('email')?.errors?.['required']">Este campo es obligatorio</small>
+        <small *ngIf="loginForm.get('email')?.errors?.['email']">El formato del correo no es válido</small>
+      </div>
+    </div>
+  
+    <div class="input-container">
+      <label for="password"><span>*</span>Contraseña</label>
+      <input id="password" type="password" formControlName="password" placeholder=" " />
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        <small>Este campo es obligatorio</small>
+      </div>
+    </div>
+
+    <div class="button-row">
+      <button type="submit" class="btn">INICIAR SESIÓN</button>
+    </div>
+    <div class="button-row">
+      <button type="button" class="btn" (click)="register()">REGISTRARSE</button>
+    </div>
+    <div class="forgot-password">
+      <a href="#" (click)="forgotPassword()">¿Olvidaste tu contraseña?</a>
+    </div>
+  </form>
+</div>
+  
