@@ -34,7 +34,9 @@ export class LoginComponent {
   }
 
   register() {
-    console.log('Redirigiendo a registro...');
+    console.log('Registro');
+    this.router.navigate(['/registrar-usuario']); 
+    console.log('Registro paso');
   }
 
   forgotPassword() {

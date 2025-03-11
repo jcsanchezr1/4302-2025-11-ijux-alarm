@@ -1,0 +1,103 @@
+<div class="register-page">
+  <div class="register-content">
+    <div class="register-title-container">
+      <span>REGISTRO DE USUARIO</span>
+    </div>
+
+    <div class="registro-container">
+      <!-- Formulario con formGroup -->
+      <form [formGroup]="registerForm" (ngSubmit)="registrarse()">
+        <div class="input-row">
+          <div class="input-container">
+            <label for="nombres"><span>*</span> Nombres</label>
+            <input 
+              type="text" 
+              id="nombres" 
+              formControlName="nombres" 
+              placeholder="" />
+            <div *ngIf="registerForm.get('nombres')?.invalid && registerForm.get('nombres')?.touched">
+              <small *ngIf="registerForm.get('nombres')?.errors?.['required']">Este campo es obligatorio</small>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label for="apellidos"><span>*</span> Apellidos</label>
+            <input 
+              type="text" 
+              id="apellidos" 
+              formControlName="apellidos" 
+              placeholder="" />
+            <div *ngIf="registerForm.get('apellidos')?.invalid && registerForm.get('apellidos')?.touched">
+              <small *ngIf="registerForm.get('apellidos')?.errors?.['required']">Este campo es obligatorio</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-container">
+            <label for="correo"><span>*</span> Correo</label>
+            <input
+              type="email"
+              id="correo"
+              formControlName="correo"
+              placeholder="" />
+            <div *ngIf="registerForm.get('correo')?.invalid && registerForm.get('correo')?.touched">
+              <small *ngIf="registerForm.get('correo')?.errors?.['required']">Este campo es obligatorio</small>
+              <small *ngIf="registerForm.get('correo')?.errors?.['email']">El formato del correo no es válido</small>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label for="telefono"><span>*</span> Número telefónico</label>
+            <input 
+              type="tel" 
+              id="telefono" 
+              formControlName="telefono"
+              placeholder="" />
+            <div *ngIf="registerForm.get('telefono')?.invalid && registerForm.get('telefono')?.touched">
+              <small *ngIf="registerForm.get('telefono')?.errors?.['required']">Este campo es obligatorio</small>
+              <small *ngIf="registerForm.get('telefono')?.errors?.['pattern']">El teléfono debe tener solo números y con una longitos de 10 digitos</small>              
+            </div>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-container">
+            <label for="contrasena"><span>*</span> Contraseña</label>
+            <input 
+              type="password" 
+              id="contrasena" 
+              formControlName="contrasena"
+              placeholder="" />
+            <div *ngIf="registerForm.get('contrasena')?.invalid && registerForm.get('contrasena')?.touched">
+              <small *ngIf="registerForm.get('contrasena')?.errors?.['required']">Este campo es obligatorio</small>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label for="confirmarContrasena"><span>*</span> Confirmar Contraseña</label>
+            <input
+              type="password"
+              id="confirmarContrasena"
+              formControlName="confirmarContrasena"
+              placeholder="" />
+              <div *ngIf="registerForm.get('confirmarContrasena')?.invalid && registerForm.get('confirmarContrasena')?.touched">
+                <small *ngIf="registerForm.get('confirmarContrasena')?.errors?.['required']">Este campo es obligatorio</small>
+                <small *ngIf="registerForm.get('confirmarContrasena')?.errors?.['noCoincide']">Las contraseñas no coinciden</small>
+              </div>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button type="submit" class="btn">REGISTRARSE</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="showSuccessModal" class="modal">
+    <div class="modal-content">
+      <p>Registro exitoso</p>
+      <button (click)="aceptarModal()" class="btn">Aceptar</button>
+    </div>
+  </div>
+</div>
