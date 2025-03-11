@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">IjuxAlarm</string>
+    <string name="ijux">IJUX</string>
+    <string name="alarm">ALARM</string>
+    <string name="correo_electronico">Correo electrónico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="iniciar_sesion">INICIAR SESIÓN</string>
+    <string name="registrarme">REGISTRARME</string>
+    <string name="o_si_lo_prefieres">O SI LO PREFIERES</string>
+    <string name="ingresar_con_tu_huella">INGRESAR CON TU HUELLA</string>
 </resources>
