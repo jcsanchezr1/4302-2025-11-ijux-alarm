@@ -10,6 +10,7 @@ import android.util.Patterns
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var emailEditText: TextInputEditText
     private lateinit var passwordEditText: TextInputEditText
     private lateinit var buttonLogin: MaterialButton
+    private lateinit var buttonRegister: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         emailEditText = findViewById(R.id.editTextEmailAddress)
         passwordEditText = findViewById(R.id.editTextPassword)
         buttonLogin = findViewById(R.id.buttonLogin)
+        buttonRegister = findViewById(R.id.buttonRegister)
     }
 
     private fun setupHints() {
@@ -67,14 +70,18 @@ class MainActivity : AppCompatActivity() {
             val isPasswordValid = passwordEditText.validate(passwordLayout)
 
             if (isEmailValid && isPasswordValid) {
-                startActivity(Intent(this, RegisterActivity::class.java))
+                startActivity(Intent(this, ListAlarmActivity::class.java))
             }
+        }
+        buttonRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 
     private fun TextInputLayout.setHintWithAsterisk(hintText: String) {
+        val color = ContextCompat.getColor(context, R.color.red)
         val spannable = SpannableStringBuilder("* $hintText").apply {
-            setSpan(ForegroundColorSpan(Color.RED), 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+            setSpan(ForegroundColorSpan(color), 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         }
         hint = spannable
     }
@@ -95,7 +102,7 @@ class MainActivity : AppCompatActivity() {
         } else if (this.id == R.id.editTextEmailAddress && !Patterns.EMAIL_ADDRESS.matcher(this.text!!)
                 .matches()
         ) {
-            textInputLayout.error = "Correo electrónico no válido"
+            textInputLayout.error = "El formato del correo no es válido"
             false
         } else {
             textInputLayout.error = null
