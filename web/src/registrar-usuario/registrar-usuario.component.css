@@ -1,3 +1,13 @@
+
+.register-page {
+    background-color: #212529;
+    min-height: 100vh;
+   
+}
+
+.register-content{
+    background-color: #212529;
+}
 .register-title-container {
     font-family: 'Roboto';
     font-style: normal;
@@ -44,18 +54,18 @@
     position: absolute;
     top: -7px;
     left: 20px;
-    background: #4b217e;
+    background: #212529;
     padding: 0 5px;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: #ffffff;
+    color: #CED4DA;
 }
 
 .input-container input {
     width: 100%;
     padding: 15px;
-    border: 1px solid #FFFF00;
+    border: 1px solid #CED4DA;
     border-radius: 7px;
     background: transparent;
     color: #ffffff;
@@ -65,7 +75,11 @@
 
 .input-container input:focus {
     outline: none;
-    border-color: #ffd700;
+    border-color: #CED4DA;
+}
+
+.input-container input.ng-invalid.ng-touched {
+    border-color: #FFA500;
 }
 
 .button-row {
@@ -77,8 +91,8 @@
 .btn {
     width: 264px;
     height: 36px;
-    background-color: #FFC0CB;
-    color: #4F2380;
+    background-color: #D0AAE7;
+    color: #000000;
     border: 1px solid #000000;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -88,15 +102,18 @@
 }
 
 .btn:hover {
-    background-color: #FF69B4;
+    background-color: #B88CD9;
+    color: #000000;
 }
 
 .btn:active {
-    background-color: #FF91A4;
+    background-color: #A36CCF;
+    color: #000000;
 }
 
 .btn:disabled {
-    background-color: #F0D8DA;
+    background-color: #E0D0F0;
+    color: #B0A4B5;
     cursor: not-allowed;
 }
 
@@ -110,6 +127,10 @@ small {
     display: block;
 }
 
+.input-container label span {
+    color: #FFA500; 
+}
+
 .modal {
     position: fixed;
     top: 0;
@@ -120,28 +141,75 @@ small {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .modal-content {
-    background: #fff;
+.modal-content {
+    background: #198754;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-  }
+}
 
-  .modal-content p {
+.modal-content p {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #4b217e;
+    color: #ffffff;
     background-color: transparent;
-  }
+}
+
+.modal-content button {
+    font-size: 18px;
+    margin-bottom: 20px;
+    background-color: #198754;
+    background-color: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+}
 
 .input-container input:-webkit-autofill {
-    box-shadow: 0 0 0 100px #4b217e inset;
+    box-shadow: 0 0 0 100px #212529 inset;
     -webkit-text-fill-color: #ffffff !important;
 }
 
 .input-container input:-webkit-autofill:focus {
-    box-shadow: 0 0 0 100px #4b217e inset;
+    box-shadow: 0 0 0 100px #212529 inset;
     -webkit-text-fill-color: #ffffff !important;
 }
+
+@media screen and (max-width: 855px) {
+    .register-title-container {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        flex-direction: column;
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+    .input-row {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%;
+        gap: 20px; 
+        padding-top: 20px; 
+    }
+
+    .input-container {
+        width: 90%; 
+        max-width: 328px;
+    }
+
+    .input-container input {
+        width: 100%;
+        box-sizing: border-box; 
+    }
+
+    .input-container label {
+        width: auto;
+        text-align: left;
+    }
+  }

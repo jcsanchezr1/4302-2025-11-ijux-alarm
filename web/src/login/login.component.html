@@ -5,7 +5,7 @@
 <div class="login-container">   
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="input-container">
-      <label for="email"><span>*</span>Correo</label>
+      <label for="email"><span>* </span>Correo</label>
       <input id="email" type="email" formControlName="email" placeholder=" " />
       <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
         <small *ngIf="loginForm.get('email')?.errors?.['required']">Este campo es obligatorio</small>
@@ -14,7 +14,7 @@
     </div>
   
     <div class="input-container">
-      <label for="password"><span>*</span>Contraseña</label>
+      <label for="password"><span>* </span>Contraseña</label>
       <input id="password" type="password" formControlName="password" placeholder=" " />
       <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
         <small>Este campo es obligatorio</small>
