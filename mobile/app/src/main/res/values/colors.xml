@@ -6,4 +6,5 @@
     <color name="purple_pressed">#5E3370</color>
     <color name="button_disabled">#D6C2E0</color>
     <color name="red">#9F0204</color>
+    <color name="success_green">#198753</color>
 </resources>
