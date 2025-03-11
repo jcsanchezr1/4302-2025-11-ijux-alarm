@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common'; 
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule], 
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -25,8 +25,8 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       console.log('Formulario válido', this.loginForm.value);
-      this.router.navigate(['/listar-alarmas']); 
-      console.log('Intentando redirigir a /listar-alarmas'); 
+      this.router.navigate(['/listar-alarmas']);
+      console.log('Intentando redirigir a /listar-alarmas');
     } else {
       this.loginForm.markAllAsTouched();
       console.log('Formulario inválido');
@@ -35,12 +35,12 @@ export class LoginComponent {
 
   register() {
     console.log('Registro');
-    this.router.navigate(['/registrar-usuario']); 
+    this.router.navigate(['/registrar-usuario']);
     console.log('Registro paso');
   }
 
   forgotPassword() {
-    console.log('Redirigiendo a la página de recuperación de contraseña...');    
+    this.router.navigate(['/recuperar-contrasena']);
   }
 
 }

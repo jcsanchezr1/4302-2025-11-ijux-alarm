@@ -1,0 +1,20 @@
+<div class="login-title-container">
+    <span>IJUX<br>ALARM</span>
+</div>
+
+<div class="recovery-container">   
+    <form [formGroup]="recuperarForm" (ngSubmit)="enviarSolicitud()">
+        <div class="input-container">
+            <label for="email"><span>* </span>Ingrese su Correo</label>
+            <input id="email" type="email" formControlName="email" placeholder=" "/>
+            <div *ngIf="recuperarForm.get('email')?.invalid && (recuperarForm.get('email')?.touched || submitted)">
+                <small *ngIf="recuperarForm.get('email')?.errors?.['required']">El correo es obligatorio.</small>
+                <small *ngIf="recuperarForm.get('email')?.errors?.['email']">El formato del correo es inválido.</small>
+            </div>
+        </div>
+
+        <div class="button-row">
+            <button type="submit" class="btn">Continuar</button>
+        </div>
+    </form>
+</div>

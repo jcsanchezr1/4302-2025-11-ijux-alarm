@@ -1,0 +1,120 @@
+.login-title-container {
+    font-family: 'Arial Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #4F2380;
+    flex-direction: column;
+    padding-top: 100px;
+  }
+
+  .recovery-title-container {
+    font-family: 'Arial Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #4F2380;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.recovery-container {
+    display: flex;
+    text-align: center;    
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 72px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 38.5px; 
+    width: 328px; 
+}
+
+.input-container label {
+    position: absolute;
+    top: -7px;
+    left: 20px;
+    background: #ffffff;
+    color: #4F2380 !important;
+    padding: 0 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.input-container input {
+    width: 100%; 
+    padding: 15px;
+    border: 1px solid #4F2380; 
+    border-radius: 7px;
+    background: transparent;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #4F2380;
+}
+
+.input-container input.ng-invalid.ng-touched {
+    border: 2px solid #A00104;
+    background-color: #FFF5F5;
+}
+
+small {
+    color: #a00104;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 12px; 
+    font-weight: 400; 
+    text-align: left; 
+    padding-left: 10px; 
+    display: block; 
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 43px;
+}
+
+.btn {
+    width: 264px;
+    height: 36px;
+    background-color: #4F2380;
+    color: #FFFFFF;
+    border: 1px solid #000000;  
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #7D3C98;  
+}
+
+.btn:active {
+    background-color: #5E3370;
+}
+
+.btn:disabled {
+    background-color: #D6C2E0;
+    cursor: not-allowed;
+    color: #4F2380;
+}

@@ -109,13 +109,23 @@
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 100; 
-  color: #FFFFFF;
+  color: #4F2380;
   text-decoration: underline; 
   text-underline-offset: 2px; 
 }
 
 .forgot-password a:hover {
   text-decoration: underline;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
 }
 
 small {
@@ -137,3 +147,5 @@ small {
   box-shadow: 0 0 0 100px #ffffff inset;
   -webkit-text-fill-color: #000000 !important;
 }
+
+
