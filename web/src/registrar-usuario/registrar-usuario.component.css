@@ -1,13 +1,4 @@
 
-.register-page {
-    background-color: #212529;
-    min-height: 100vh;
-   
-}
-
-.register-content{
-    background-color: #212529;
-}
 .register-title-container {
     font-family: 'Roboto';
     font-style: normal;
@@ -15,7 +6,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: #FFFFFF;
+    color: #4F2380;
     flex-direction: column;
     padding-top: 100px;
     padding-bottom: 56px;
@@ -54,32 +45,39 @@
     position: absolute;
     top: -7px;
     left: 20px;
-    background: #212529;
+    background: #ffffff;
     padding: 0 5px;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: #CED4DA;
+    color: #4F2380 !important;
+    color: #ffffff;
+   
+}
+
+.input-container label span {
+    color: #a00104; 
 }
 
 .input-container input {
     width: 100%;
     padding: 15px;
-    border: 1px solid #CED4DA;
+    border: 1px solid #4F2380;
     border-radius: 7px;
     background: transparent;
-    color: #ffffff;
+    color: #000000;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
 .input-container input:focus {
     outline: none;
-    border-color: #CED4DA;
+    border-color: #4F2380;
 }
 
 .input-container input.ng-invalid.ng-touched {
-    border-color: #FFA500;
+    border: 2px solid #A00104;
+    background-color: #FFF5F5;
 }
 
 .button-row {
@@ -91,8 +89,8 @@
 .btn {
     width: 264px;
     height: 36px;
-    background-color: #D0AAE7;
-    color: #000000;
+    background-color: #4F2380;
+    color: #FFFFFF;
     border: 1px solid #000000;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -102,23 +100,21 @@
 }
 
 .btn:hover {
-    background-color: #B88CD9;
-    color: #000000;
+    background-color: #5E3370;    
 }
 
 .btn:active {
-    background-color: #A36CCF;
-    color: #000000;
+    background-color: #5E3370;    
 }
 
 .btn:disabled {
-    background-color: #E0D0F0;
-    color: #B0A4B5;
+    background-color: #D6C2E0;
+    color: #4F2380;
     cursor: not-allowed;
 }
 
 small {
-    color: #FFA500;
+    color: #a00104;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -127,9 +123,7 @@ small {
     display: block;
 }
 
-.input-container label span {
-    color: #FFA500; 
-}
+
 
 .modal {
     position: fixed;
@@ -143,37 +137,60 @@ small {
     align-items: center;
 }
 
-.modal-content {
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para resaltar el modal */
+  }
+  
+  .modal-content {
     background: #198754;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     text-align: center;
-}
-
-.modal-content p {
+    width: 265px;
+    height: 160px;
+    max-width: 800px;
+  }
+  
+  .modal-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+  
+  .modal-content button {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #ffffff;
     background-color: transparent;
-}
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  .modal-content button:hover {
+    background-color: #ffffff;
+    color: #198754;
+  }
 
-.modal-content button {
-    font-size: 18px;
-    margin-bottom: 20px;
-    background-color: #198754;
-    background-color: transparent;
-    border-color: #ffffff;
-    color: #ffffff;
-}
 
 .input-container input:-webkit-autofill {
-    box-shadow: 0 0 0 100px #212529 inset;
-    -webkit-text-fill-color: #ffffff !important;
+    box-shadow: 0 0 0 100px #ffffff inset;
+    -webkit-text-fill-color: #000000 !important;
 }
 
 .input-container input:-webkit-autofill:focus {
-    box-shadow: 0 0 0 100px #212529 inset;
-    -webkit-text-fill-color: #ffffff !important;
+    box-shadow: 0 0 0 100px #ffffff inset;
+    -webkit-text-fill-color: #000000 !important;
 }
 
 @media screen and (max-width: 855px) {
@@ -184,7 +201,7 @@ small {
         display: flex;
         align-items: center;
         text-align: center;
-        color: #FFFFFF;
+        color: #4F2380;
         flex-direction: column;
         padding-top: 100px;
         padding-bottom: 20px;
