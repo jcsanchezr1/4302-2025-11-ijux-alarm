@@ -18,4 +18,10 @@
     <string name="registro_exitoso">Registro Exitoso</string>
     <string name="pulsa_aceptar_para_volver_al_inicio">Pulsa aceptar para volver al inicio</string>
     <string name="aceptar">Aceptar</string>
+
+    <string name="titulo_nueva_alarma_tratamiento">NUEVA ALARMA DE TRATAMIENTO</string>
+    <string name="label_nombre_tratamiento">Nombre del tratamiento</string>
+    <string name="label_cantidad">Cantidad</string>
+    <string name="label_fecha_inicio">Fecha de Inicio</string>
+
 </resources>
