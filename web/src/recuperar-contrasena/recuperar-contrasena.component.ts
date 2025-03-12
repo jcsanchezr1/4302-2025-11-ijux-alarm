@@ -22,9 +22,13 @@ export class RecuperarContrasenaComponent {
   }
 
   enviarSolicitud() {
+    if (this.recuperarForm.invalid) {
+      this.recuperarForm.markAllAsTouched();
+      return;
+    }
     this.submitted = true;
     if (this.recuperarForm.valid) {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/recuperar-contrasena-nueva']);
     }
   }
 }
