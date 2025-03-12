@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         initViews()
         setupHints()
         setupValidation()
-        setupLoginButton()
+        setupButtons()
     }
 
     private fun initViews() {
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         passwordEditText.setValidation(passwordLayout)
     }
 
-    private fun setupLoginButton() {
+    private fun setupButtons() {
         buttonLogin.setOnClickListener {
             val isEmailValid = emailEditText.validate(emailLayout)
             val isPasswordValid = passwordEditText.validate(passwordLayout)

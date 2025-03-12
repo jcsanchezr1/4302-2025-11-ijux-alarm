@@ -1,6 +1,7 @@
 package com.example.api.ijux.alarm
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableStringBuilder
@@ -8,6 +9,7 @@ import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.DatePicker
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatImageButton
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.snackbar.Snackbar
@@ -25,16 +27,16 @@ class CreateTreatmentAlarmActivity : AppCompatActivity() {
     private lateinit var intervalAutoComplete: TextInputEditText
     private lateinit var toneAutoComplete: TextInputEditText
     private lateinit var buttonSaveAlarm: MaterialButton
+    private lateinit var buttonLogOutCreateTreatment: AppCompatImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_treatment_alarm)
-
         initViews()
         setupHints()
         setupValidation()
-        setupSaveRegisterButton()
-        setupDatePicker();
+        setupButtons()
+        setupDatePicker()
     }
 
     private fun initViews() {
@@ -42,10 +44,40 @@ class CreateTreatmentAlarmActivity : AppCompatActivity() {
         dateEditText = findViewById(R.id.editTextStartDate);
         quantityEditText = findViewById(R.id.editTextQuantity)
         buttonSaveAlarm = findViewById(R.id.buttonSaveAlarm)
+        buttonLogOutCreateTreatment = findViewById(R.id.imageButtonLogOutCreateTreatment)
         /*unitAutoComplete = findViewById(R.id.autoCompleteUnit)
         intervalAutoComplete = findViewById(R.id.autoCompleteInterval)
         toneAutoComplete = findViewById(R.id.autoCompleteTone)
         */
+    }
+
+    private fun setupButtons() {
+        buttonSaveAlarm.setOnClickListener {
+            val isValid = listOf(
+                treatmentNameEditText.validate(findViewById(R.id.textInputLayoutTreatmentName)),
+                quantityEditText.validate(findViewById(R.id.textInputLayoutQuantity)),
+                dateEditText.validate(findViewById(R.id.textInputLayoutStartDate)),
+                /*unitAutoComplete.validate(findViewById(R.id.textInputLayoutUnit)),
+                intervalAutoComplete.validate(findViewById(R.id.textInputLayoutInterval)),
+                toneAutoComplete.validate(findViewById(R.id.textInputLayoutTone))*/
+            ).all { it }
+
+            if (isValid) {
+                showSuccessDialog()
+                val intent = Intent(this, ListAlarmActivity::class.java)
+                intent.putExtra("HAS_ALARMS", true)
+                startActivity(intent)
+            } else {
+                Snackbar.make(
+                    findViewById(R.id.main),
+                    "Por favor, complete todos los campos correctamente",
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
+        }
+        buttonLogOutCreateTreatment.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
     }
 
     private fun setupHints() {
@@ -64,25 +96,6 @@ class CreateTreatmentAlarmActivity : AppCompatActivity() {
         /*unitAutoComplete.setValidation(findViewById(R.id.textInputLayoutUnit))
         intervalAutoComplete.setValidation(findViewById(R.id.textInputLayoutInterval))
         toneAutoComplete.setValidation(findViewById(R.id.textInputLayoutTone))*/
-    }
-
-    private fun setupSaveRegisterButton() {
-        buttonSaveAlarm.setOnClickListener {
-            val isValid = listOf(
-                treatmentNameEditText.validate(findViewById(R.id.textInputLayoutTreatmentName)),
-                quantityEditText.validate(findViewById(R.id.textInputLayoutQuantity)),
-                dateEditText.validate(findViewById(R.id.textInputLayoutStartDate)),
-                /*unitAutoComplete.validate(findViewById(R.id.textInputLayoutUnit)),
-                intervalAutoComplete.validate(findViewById(R.id.textInputLayoutInterval)),
-                toneAutoComplete.validate(findViewById(R.id.textInputLayoutTone))*/
-            ).all { it }
-
-            if (isValid) {
-                showSuccessDialog()
-            } else {
-                Snackbar.make(findViewById(R.id.main), "Por favor, complete todos los campos correctamente", Snackbar.LENGTH_LONG).show()
-            }
-        }
     }
 
     private fun setupDatePicker() {
@@ -109,7 +122,8 @@ class CreateTreatmentAlarmActivity : AppCompatActivity() {
 
 
     private fun showSuccessDialog() {
-        Snackbar.make(findViewById(R.id.main), "Alarma guardada exitosamente", Snackbar.LENGTH_LONG).show()
+        Snackbar.make(findViewById(R.id.main), "Alarma guardada exitosamente", Snackbar.LENGTH_LONG)
+            .show()
     }
 
     private fun TextInputLayout.setHintWithAsterisk(hintText: String) {
