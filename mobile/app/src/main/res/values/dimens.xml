@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_height_alarm_card">75dp</dimen>
+    <dimen name="layout_marginTop_alarm_card">25dp</dimen>
+    <dimen name="textSize_alarm_card_description">12sp</dimen>
+    <dimen name="textSize_alarm_card_hour">25sp</dimen>
+</resources>
