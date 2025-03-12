@@ -18,4 +18,15 @@
     <string name="registro_exitoso">Registro Exitoso</string>
     <string name="pulsa_aceptar_para_volver_al_inicio">Pulsa aceptar para volver al inicio</string>
     <string name="aceptar">Aceptar</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="alarmas">ALARMAS</string>
+    <string name="crear_alarma_de_tratamiento">Crear alarma de tratamiento</string>
+    <string name="crear_alarma">Crear alarma</string>
+    <string name="de_tratamiento">de tratamiento</string>
+    <string name="crear_alarma_de_reunion">Crear alarma de reunión</string>
+    <string name="de_reunion">de reunión</string>
+    <string name="crear_alarma_de_sueno">Crear alarma de sueño</string>
+    <string name="de_sueno">de sueño</string>
+    <string name="no_tienes_ninguna">No tienes ninguna</string>
+    <string name="alarma">alarma</string>
 </resources>
