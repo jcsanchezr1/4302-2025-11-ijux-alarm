@@ -1,0 +1,46 @@
+<div class="login-title-container">
+    <span>IJUX<br>ALARM</span>
+</div>
+
+<div class="recovery-container">   
+    <form [formGroup]="recuperarForm" (ngSubmit)="enviarSolicitud()">
+        <div class="input-container">
+            <label for="nuevaContrasena"><span>* </span>Nueva Contraseña</label>
+            <input id="nuevaContrasena" type="password" formControlName="nuevaContrasena" placeholder=" " (input)="recuperarForm.updateValueAndValidity()"/>
+            <div *ngIf="recuperarForm.get('nuevaContrasena')?.invalid && (recuperarForm.get('nuevaContrasena')?.touched )">
+                <small *ngIf="recuperarForm.get('nuevaContrasena')?.errors?.['required']">La nueva contraseña es obligatoria.</small>
+                <small *ngIf="recuperarForm.get('nuevaContrasena')?.errors?.['minlength']">La contraseña debe tener al menos 8 caracteres.</small>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <label for="confirmarContrasena"><span>* </span>Confirmar Nueva Contraseña</label>
+            <input 
+                id="confirmarContrasena" 
+                type="password" 
+                formControlName="confirmarContrasena" 
+                placeholder=" " 
+                (input)="recuperarForm.updateValueAndValidity()"
+                [class.ng-invalid]="confirmarContrasena?.invalid && confirmarContrasena?.touched || recuperarForm.hasError('noCoincide') && confirmarContrasena?.touched"
+                [class.ng-touched]="confirmarContrasena?.touched"
+            />
+            
+            <div *ngIf="confirmarContrasena?.invalid && confirmarContrasena?.touched">
+                <small *ngIf="confirmarContrasena?.errors?.['required']">La confirmación de la contraseña es obligatoria.</small>
+            </div>
+            <div *ngIf="recuperarForm.hasError('noCoincide') && confirmarContrasena?.touched">
+                <small>Las contraseñas no coinciden.</small>
+            </div>
+        </div>
+
+        <div class="button-row">
+            <button type="submit" class="btn">Continuar</button>
+        </div>
+    </form>
+    <div *ngIf="showSuccessModal" class="modal">
+        <div class="modal-content">
+          <p>Contraseña actualizada</p>
+          <button (click)="aceptarModal()" class="btn">Aceptar</button>
+        </div>
+      </div>
+</div>
