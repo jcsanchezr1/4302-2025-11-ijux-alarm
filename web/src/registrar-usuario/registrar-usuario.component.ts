@@ -24,21 +24,38 @@ export class RegistrarUsuarioComponent {
       contrasena: ['', [Validators.required]],
       confirmarContrasena: ['', [Validators.required]]
     });
+
+    this.registerForm.get('confirmarContrasena')?.valueChanges.subscribe(() => {
+      this.validarCoincidencia();
+    });
+
+    this.registerForm.get('contrasena')?.valueChanges.subscribe(() => {
+      this.validarCoincidencia();
+    });
   }
 
   registrarse() {
     if (this.registerForm.invalid) {
       this.registerForm.markAllAsTouched();
+      this.validarCoincidencia();
       return;
     }
 
-    if (this.registerForm.value.contrasena !== this.registerForm.value.confirmarContrasena) {
-      this.registerForm.get('confirmarContrasena')?.setErrors({ noCoincide: true });
-      return;
-    }
-    
     this.showSuccessModal = true;
     console.log('Usuario registrado:', this.registerForm.value);
+  }
+
+  validarCoincidencia() {
+    const contrasena = this.registerForm.get('contrasena')?.value;
+    const confirmarContrasena = this.registerForm.get('confirmarContrasena')?.value;
+
+    if (confirmarContrasena && contrasena !== confirmarContrasena) {
+      this.registerForm.get('confirmarContrasena')?.setErrors({ noCoincide: true });
+    } else if (confirmarContrasena === '') {
+      this.registerForm.get('confirmarContrasena')?.setErrors({ required: true });
+    } else {
+      this.registerForm.get('confirmarContrasena')?.setErrors(null);
+    }
   }
 
   aceptarModal() {
