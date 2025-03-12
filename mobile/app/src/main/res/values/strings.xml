@@ -33,5 +33,13 @@
     <string name="label_nombre_tratamiento">Nombre del tratamiento</string>
     <string name="label_cantidad">Cantidad</string>
     <string name="label_fecha_inicio">Fecha de Inicio</string>
+    <string name="tratamiento_dolex">Tratamiento - Dolex</string>
+    <string name="_7_00_am">7:00 AM</string>
+    <string name="reunion_capacitacion_odoo">Reunión - Capacitación Odoo</string>
+    <string name="_12_00_pm">12:00 PM</string>
+    <string name="sueno_gimnasio">Sueño - Gimnasio</string>
+    <string name="_7_40_am">7:40 AM</string>
+    <string name="sueno_natacion">Sueño - Natación</string>
+    <string name="_9_00_pm">9:00 PM</string>
 
 </resources>
