@@ -1,0 +1,70 @@
+.app-title {
+  font-family: "Arial Black", sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #4f2380;
+  letter-spacing: 0;
+  word-spacing: -2px;
+  margin-top: 40px;
+  margin-bottom: 70px !important;
+}
+
+.sidebar {
+  width: 250px;
+}
+
+.sidebar .nav-link {
+  font-family: "Roboto", sans-serif;
+  color: #4f2380;
+  background-color: white;
+  border: 2px solid #4f2380;
+  border-radius: 103.96px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+}
+
+.sidebar .nav-link.active {
+  background-color: #4f2380;
+  color: white;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #7d3c98;
+  color: white;
+}
+
+.logout-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  margin-right: 40px;
+  margin-top: 40px;
+  width: 150px !important;
+}
+
+.btn {
+  width: 264px;
+  height: 36px;
+  background-color: #4f2380;
+  color: #ffffff;
+  border: 1px solid #000000;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #7d3c98;
+}
+
+.btn:active {
+  background-color: #5e3370;
+}

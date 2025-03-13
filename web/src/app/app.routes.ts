@@ -6,12 +6,16 @@ import { ListarAlarmasComponent } from '../listar-alarmas/listar-alarmas.compone
 import { RegistrarUsuarioComponent } from '../registrar-usuario/registrar-usuario.component';
 import { RecuperarContrasenaComponent } from '../recuperar-contrasena/recuperar-contrasena.component';
 import { RecuperarContrasenaNuevaComponent } from '../recuperar-contrasena-nueva/recuperar-contrasena-nueva.component';
+import { HabilitarDeshabilitarComponent } from '../habilitar-deshabilitar/habilitar-deshabilitar.component';
+import { EstadisticasComponent } from '../estadisticas/estadisticas.component';
 
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'registrar-usuario', component: RegistrarUsuarioComponent },
     { path: 'listar-alarmas', component: ListarAlarmasComponent },
+    { path: 'habilitar-deshabilitar', component: HabilitarDeshabilitarComponent },
+    { path: 'estadisticas', component: EstadisticasComponent },
     { path: 'recuperar-contrasena', component: RecuperarContrasenaComponent },
     { path: 'recuperar-contrasena-nueva', component: RecuperarContrasenaNuevaComponent },
     { path: '', redirectTo: '/login', pathMatch: 'full' }

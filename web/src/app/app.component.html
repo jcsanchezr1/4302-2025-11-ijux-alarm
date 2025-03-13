@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<div *ngIf="mostrarMenu" class="d-flex">
+    <app-sidebar></app-sidebar>
+    <div class="flex-grow-1 p-3">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
+  <div *ngIf="!mostrarMenu">
+    <router-outlet></router-outlet>
+  </div>
+  
