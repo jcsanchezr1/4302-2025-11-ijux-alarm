@@ -29,7 +29,7 @@
     <string name="de_sueno">de sueño</string>
     <string name="no_tienes_ninguna">No tienes ninguna</string>
     <string name="alarma">alarma</string>
-    <string name="titulo_nueva_alarma_tratamiento">NUEVA ALARMA DE TRATAMIENTO</string>
+    <string name="titulo_nueva_alarma">NUEVA ALARMA</string>
     <string name="label_nombre_tratamiento">Nombre del tratamiento</string>
     <string name="label_cantidad">Cantidad</string>
     <string name="label_fecha_inicio">Fecha de Inicio</string>
@@ -41,5 +41,13 @@
     <string name="_7_40_am">7:40 AM</string>
     <string name="sueno_natacion">Sueño - Natación</string>
     <string name="_9_00_pm">9:00 PM</string>
+    <string name="volver">Volver</string>
+    <string name="label_fecha_final">Fecha Final</string>
+    <string name="label_hora_de_inicio">Hora de inicio</string>
+    <string name="label_unidad_de_medida">Unidad de medida</string>
+    <string name="dosificacion">Dosificación</string>
+    <string name="label_recordar_cada">Recordar Cada</string>
+    <string name="label_selecciona_el_tono">Selecciona el tono</string>
+    <string name="label_vibrar">Vibrar</string>
 
 </resources>

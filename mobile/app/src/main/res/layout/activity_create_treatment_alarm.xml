@@ -1,119 +1,321 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateTreatmentAlarmActivity">
+    android:fillViewport="true">
 
-    <ImageButton
-        android:id="@+id/imageButtonLogOutCreateTreatment"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:background="@null"
-        android:contentDescription="@string/cerrar_sesion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/outline_logout_40" />
-
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:fontFamily="@font/roboto"
-        android:gravity="center"
-        android:text="@string/titulo_nueva_alarma_tratamiento"
-        android:textAlignment="center"
-        android:textColor="@color/purple"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutTreatmentName"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:hint="@string/label_nombre_tratamiento"
-        android:textColorHighlight="@color/purple"
-        android:textColorHint="@color/purple"
-        app:boxStrokeColor="@color/text_input_border"
-        app:expandedHintEnabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewTitle">
+        tools:context=".CreateTreatmentAlarmActivity">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextTreatmentName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <ImageButton
+            android:id="@+id/imageButtonBackCreateTreatment"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@null"
+            android:contentDescription="@string/volver"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/outline_arrow_back_40" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutStartDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:hint="@string/label_fecha_inicio"
-        android:textColorHighlight="@color/purple"
-        android:textColorHint="@color/purple"
-        app:boxStrokeColor="@color/text_input_border"
-        app:expandedHintEnabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textInputLayoutTreatmentName">
+        <ImageButton
+            android:id="@+id/imageButtonLogOutCreateTreatment"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@null"
+            android:contentDescription="@string/cerrar_sesion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/outline_logout_40" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextStartDate"
+        <TextView
+            android:id="@+id/textViewNewAlarmTreatment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/titulo_nueva_alarma"
+            android:textColor="@color/purple"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewNewAlarmTreatment2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/de_tratamiento"
+            android:textAllCaps="true"
+            android:textColor="@color/purple"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNewAlarmTreatment" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutTreatmentName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="false" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:hint="@string/label_nombre_tratamiento"
+            android:textColorHighlight="@color/purple"
+            android:textColorHint="@color/purple"
+            app:boxStrokeColor="@color/text_input_border"
+            app:expandedHintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewNewAlarmTreatment2">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutQuantity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:hint="@string/label_cantidad"
-        android:textColorHighlight="@color/purple"
-        android:textColorHint="@color/purple"
-        app:boxStrokeColor="@color/text_input_border"
-        app:expandedHintEnabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textInputLayoutStartDate">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextTreatmentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextQuantity"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutStartDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:hint="@string/label_fecha_inicio"
+            android:textColorHighlight="@color/purple"
+            android:textColorHint="@color/purple"
+            app:boxStrokeColor="@color/text_input_border"
+            app:endIconDrawable="@drawable/outline_calendar_today_24"
+            app:endIconMode="custom"
+            app:endIconTint="@color/purple"
+            app:expandedHintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutTreatmentName">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonSaveAlarm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/guardar"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/button_background"
-        app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textInputLayoutQuantity" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:hint="@string/label_fecha_final"
+            android:textColorHighlight="@color/purple"
+            android:textColorHint="@color/purple"
+            app:boxStrokeColor="@color/text_input_border"
+            app:endIconDrawable="@drawable/outline_calendar_today_24"
+            app:endIconMode="custom"
+            app:endIconTint="@color/purple"
+            app:expandedHintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutStartDate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutStartHour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:hint="@string/label_hora_de_inicio"
+            android:textColorHighlight="@color/purple"
+            android:textColorHint="@color/purple"
+            app:boxStrokeColor="@color/text_input_border"
+            app:endIconDrawable="@drawable/outline_schedule_24"
+            app:endIconMode="custom"
+            app:endIconTint="@color/purple"
+            app:expandedHintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutEndDate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextStartHour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewDosificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/dosificacion"
+            android:textColor="@color/purple"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutStartHour" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:hint="@string/label_cantidad"
+            android:textColorHighlight="@color/purple"
+            android:textColorHint="@color/purple"
+            app:boxStrokeColor="@color/text_input_border"
+            app:expandedHintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDosificacion">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutUnit"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:hint="@string/label_unidad_de_medida"
+            android:textColorHighlight="@color/purple"
+            android:textColorHint="@color/purple"
+            app:boxStrokeColor="@color/text_input_border"
+            app:endIconTint="@color/purple"
+            app:expandedHintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutQuantity">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutListTreatment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutUnit">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutRemember"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/label_recordar_cada"
+                android:textColorHighlight="@color/purple"
+                android:textColorHint="@color/purple"
+                app:boxStrokeColor="@color/text_input_border"
+                app:endIconTint="@color/purple"
+                app:expandedHintEnabled="false">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/autoCompleteTextViewRemember"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutSound"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/label_selecciona_el_tono"
+                android:textColorHighlight="@color/purple"
+                android:textColorHint="@color/purple"
+                app:boxStrokeColor="@color/text_input_border"
+                app:endIconTint="@color/purple"
+                app:expandedHintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutRemember">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/autoCompleteTextViewSound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchVibrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/label_vibrar"
+            android:textColor="@color/purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutListTreatment"
+            app:thumbTint="@color/switch_thumb_color"
+            app:trackDecorationTint="@color/purple"
+            app:trackTint="@color/switch_track_color" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSaveAlarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/guardar"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/button_background"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switchVibrar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

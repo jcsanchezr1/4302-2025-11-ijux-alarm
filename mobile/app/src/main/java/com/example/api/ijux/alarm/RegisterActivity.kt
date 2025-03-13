@@ -10,6 +10,7 @@ import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
 import android.util.Patterns
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
@@ -81,6 +82,11 @@ class RegisterActivity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(R.layout.success_dialog)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val titleText = dialog.findViewById<TextView>(R.id.titleTextSuccessRegister)
+        val descriptionText = dialog.findViewById<TextView>(R.id.descriptionTextSuccessRegister)
+        titleText.text = "Registro Exitoso"
+        descriptionText.text = "Pulsa aceptar para volver al inicio"
 
         dialog.setCancelable(false)
         dialog.setCanceledOnTouchOutside(false)
