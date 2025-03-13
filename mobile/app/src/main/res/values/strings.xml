@@ -49,5 +49,9 @@
     <string name="label_recordar_cada">Recordar Cada</string>
     <string name="label_selecciona_el_tono">Tono</string>
     <string name="label_vibrar">Vibrar</string>
+    <string name="label_nombre_de_la_reunion">Nombre de la Reunión</string>
+    <string name="label_duracion_en_minutos">Duración en minutos</string>
+    <string name="label_repetir">Repetir</string>
+    <string name="label_descripcion">Descripción</string>
 
 </resources>

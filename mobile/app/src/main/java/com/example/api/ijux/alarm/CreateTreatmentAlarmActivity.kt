@@ -135,6 +135,8 @@ class CreateTreatmentAlarmActivity : AppCompatActivity() {
 
     private fun setupDatePicker() {
         startDateEditText.setOnClickListener {
+            treatmentNameEditText.validate(treatmentNameTextInputLayout)
+            quantityEditText.validate(quantityTextInputLayout)
             val datePicker =
                 MaterialDatePicker.Builder.datePicker()
                     .setTitleText("Selecciona una fecha")
@@ -155,6 +157,8 @@ class CreateTreatmentAlarmActivity : AppCompatActivity() {
         }
 
         endDateEditText.setOnClickListener {
+            treatmentNameEditText.validate(treatmentNameTextInputLayout)
+            quantityEditText.validate(quantityTextInputLayout)
             val datePicker =
                 MaterialDatePicker.Builder.datePicker()
                     .setTitleText("Selecciona una fecha")
@@ -177,6 +181,8 @@ class CreateTreatmentAlarmActivity : AppCompatActivity() {
 
     private fun setupTimePicker() {
         startHourEditText.setOnClickListener {
+            treatmentNameEditText.validate(treatmentNameTextInputLayout)
+            quantityEditText.validate(quantityTextInputLayout)
             val picker = MaterialTimePicker.Builder()
                 .setTimeFormat(TimeFormat.CLOCK_12H)
                 .setHour(12)

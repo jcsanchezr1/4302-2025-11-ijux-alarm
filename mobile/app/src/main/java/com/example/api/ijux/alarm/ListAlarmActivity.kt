@@ -14,6 +14,7 @@ class ListAlarmActivity : AppCompatActivity() {
 
     private lateinit var buttonLogOut: AppCompatImageButton
     private lateinit var buttonHeart: ImageView
+    private lateinit var buttonGroup: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +43,7 @@ class ListAlarmActivity : AppCompatActivity() {
     private fun initViews() {
         buttonLogOut = findViewById(R.id.imageButtonLogOut)
         buttonHeart = findViewById(R.id.imageViewHeart)
+        buttonGroup = findViewById(R.id.imageViewGroup)
     }
 
     private fun setupButtons() {
@@ -50,6 +52,9 @@ class ListAlarmActivity : AppCompatActivity() {
         }
         buttonHeart.setOnClickListener {
             startActivity(Intent(this, CreateTreatmentAlarmActivity::class.java))
+        }
+        buttonGroup.setOnClickListener {
+            startActivity(Intent(this, CreateMeetingAlarmActivity::class.java))
         }
     }
 }
