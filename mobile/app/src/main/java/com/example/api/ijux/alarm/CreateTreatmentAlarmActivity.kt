@@ -202,7 +202,7 @@ class CreateTreatmentAlarmActivity : AppCompatActivity() {
     }
 
     private fun setupUnitList() {
-        val unidades = listOf("Cucharada", "Pastilla")
+        val unidades = listOf("Cucharada", "Pastilla", "Mililitros", "Jeringa")
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, unidades)
         unitAutoCompleteText.setAdapter(adapter)
         unitAutoCompleteText.setOnItemClickListener { _, _, _, _ ->
@@ -223,7 +223,7 @@ class CreateTreatmentAlarmActivity : AppCompatActivity() {
 
     private fun setupSoundList() {
         val unidades =
-            listOf("Clásica", "Electrónica", "Merengue", "Predeterminado", "Rock", "Salsa")
+            listOf("Clásica", "Electrónica", "Merengue", "Pop", "Rock", "Salsa")
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, unidades)
         soundAutoCompleteText.setAdapter(adapter)
         soundAutoCompleteText.setOnItemClickListener { _, _, _, _ ->

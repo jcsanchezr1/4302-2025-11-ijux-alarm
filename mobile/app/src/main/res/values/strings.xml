@@ -47,7 +47,7 @@
     <string name="label_unidad_de_medida">Unidad de medida</string>
     <string name="dosificacion">Dosificación</string>
     <string name="label_recordar_cada">Recordar Cada</string>
-    <string name="label_selecciona_el_tono">Selecciona el tono</string>
+    <string name="label_selecciona_el_tono">Tono</string>
     <string name="label_vibrar">Vibrar</string>
 
 </resources>
