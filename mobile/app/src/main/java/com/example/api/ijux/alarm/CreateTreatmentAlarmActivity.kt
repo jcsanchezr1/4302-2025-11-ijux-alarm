@@ -102,9 +102,10 @@ class CreateTreatmentAlarmActivity : AppCompatActivity() {
             }
         }
         buttonBackCreateTreatment.setOnClickListener {
-            val intent = Intent(this, ListAlarmActivity::class.java)
-            intent.putExtra("HAS_ALARMS", false)
-            startActivity(intent)
+            val listAlarmActivity = Intent(this, ListAlarmActivity::class.java)
+            val hasAlarms = intent.getBooleanExtra("HAS_ALARMS", false)
+            listAlarmActivity.putExtra("HAS_ALARMS", hasAlarms)
+            startActivity(listAlarmActivity)
         }
         buttonLogOutCreateTreatment.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
@@ -253,9 +254,9 @@ class CreateTreatmentAlarmActivity : AppCompatActivity() {
         val buttonAccept = dialog.findViewById<MaterialButton>(R.id.buttonAccept)
         buttonAccept.setOnClickListener {
             dialog.dismiss()
-            val intent = Intent(this, ListAlarmActivity::class.java)
-            intent.putExtra("HAS_ALARMS", true)
-            startActivity(intent)
+            val listAlarmActivity = Intent(this, ListAlarmActivity::class.java)
+            listAlarmActivity.putExtra("HAS_ALARMS", true)
+            startActivity(listAlarmActivity)
             finish()
         }
 

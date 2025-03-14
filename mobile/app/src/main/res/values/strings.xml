@@ -44,6 +44,7 @@
     <string name="volver">Volver</string>
     <string name="label_fecha_final">Fecha Final</string>
     <string name="label_hora_de_inicio">Hora de inicio</string>
+    <string name="label_hora_fin">Hora Fin</string>
     <string name="label_unidad_de_medida">Unidad de medida</string>
     <string name="dosificacion">Dosificación</string>
     <string name="label_recordar_cada">Recordar Cada</string>
@@ -53,5 +54,6 @@
     <string name="label_duracion_en_minutos">Duración en minutos</string>
     <string name="label_repetir">Repetir</string>
     <string name="label_descripcion">Descripción</string>
+    <string name="nombre">nombre</string>
 
 </resources>

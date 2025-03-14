@@ -10,10 +10,10 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".CreateMeetingAlarmActivity">
+        tools:context=".CreateSleepAlarmActivity">
 
         <ImageButton
-            android:id="@+id/imageButtonBackCreateMeeting"
+            android:id="@+id/imageButtonBackCreateSleep"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:background="@null"
@@ -23,7 +23,7 @@
             app:srcCompat="@drawable/outline_arrow_back_40" />
 
         <ImageButton
-            android:id="@+id/imageButtonLogOutCreateMeeting"
+            android:id="@+id/imageButtonLogOutCreateSleep"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:background="@null"
@@ -33,7 +33,7 @@
             app:srcCompat="@drawable/outline_logout_40" />
 
         <TextView
-            android:id="@+id/textViewNewAlarmMeeting"
+            android:id="@+id/textViewNewAlarmSleep"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
@@ -47,71 +47,43 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textViewNewAlarmMeeting2"
+            android:id="@+id/textViewNewAlarmSleep2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
-            android:text="@string/de_reunion"
+            android:text="@string/de_sueno"
             android:textAllCaps="true"
             android:textColor="@color/purple"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewNewAlarmMeeting" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewNewAlarmSleep" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutMeetingName"
+            android:id="@+id/textInputLayoutSleepName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:hint="@string/label_nombre_de_la_reunion"
+            android:hint="@string/nombre"
             android:textColorHighlight="@color/purple"
             android:textColorHint="@color/purple"
             app:boxStrokeColor="@color/text_input_border"
             app:expandedHintEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textViewNewAlarmMeeting2">
+            app:layout_constraintTop_toBottomOf="@id/textViewNewAlarmSleep2">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextMeetingName"
+                android:id="@+id/editTextSleepName"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/layout_height_text_input_edit_text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutStartDateMeeting"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="30dp"
-            android:hint="@string/label_fecha_inicio"
-            android:textColorHighlight="@color/purple"
-            android:textColorHint="@color/purple"
-            app:boxStrokeColor="@color/text_input_border"
-            app:endIconDrawable="@drawable/outline_calendar_today_24"
-            app:endIconMode="custom"
-            app:endIconTint="@color/purple"
-            app:expandedHintEnabled="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textInputLayoutMeetingName">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextStartDateMeeting"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/layout_height_text_input_edit_text"
-                android:clickable="true"
-                android:focusable="false"
-                android:inputType="none" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutStartHourMeeting"
+            android:id="@+id/textInputLayoutStartHourSleep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -127,10 +99,10 @@
             app:expandedHintEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textInputLayoutStartDateMeeting">
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutSleepName">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextStartHourMeeting"
+                android:id="@+id/editTextStartHourSleep"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/layout_height_text_input_edit_text"
                 android:clickable="true"
@@ -139,30 +111,35 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutDurationMeeting"
+            android:id="@+id/textInputLayoutEndHourSleep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:hint="@string/label_duracion_en_minutos"
+            android:hint="@string/label_hora_fin"
             android:textColorHighlight="@color/purple"
             android:textColorHint="@color/purple"
             app:boxStrokeColor="@color/text_input_border"
+            app:endIconDrawable="@drawable/outline_schedule_24"
+            app:endIconMode="custom"
+            app:endIconTint="@color/purple"
             app:expandedHintEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textInputLayoutStartHourMeeting">
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutStartHourSleep">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextDurationMeeting"
+                android:id="@+id/editTextEndHourSleep"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/layout_height_text_input_edit_text"
-                android:inputType="number" />
+                android:clickable="true"
+                android:focusable="false"
+                android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutRepeatMeeting"
+            android:id="@+id/textInputLayoutRepeatSleep"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -177,17 +154,17 @@
             app:expandedHintEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textInputLayoutDurationMeeting">
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutEndHourSleep">
 
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/autoCompleteTextViewRepeatMeeting"
+                android:id="@+id/autoCompleteTextViewRepeatSleep"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/layout_height_text_input_edit_text"
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutSoundMeeting"
+            android:id="@+id/textInputLayoutSoundSleep"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -200,17 +177,17 @@
             app:boxStrokeColor="@color/text_input_border"
             app:endIconTint="@color/purple"
             app:expandedHintEnabled="false"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutRepeatMeeting">
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutRepeatSleep">
 
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/autoCompleteTextViewSoundMeeting"
+                android:id="@+id/autoCompleteTextViewSoundSleep"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/layout_height_text_input_edit_text"
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/switchVibrarMeeting"
+            android:id="@+id/switchVibrarSleep"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -219,13 +196,13 @@
             android:textColor="@color/purple"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSoundMeeting"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSoundSleep"
             app:thumbTint="@color/switch_thumb_color"
             app:trackDecorationTint="@color/purple"
             app:trackTint="@color/switch_track_color" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutMeetingDescription"
+            android:id="@+id/textInputLayoutSleepDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -238,16 +215,18 @@
             app:expandedHintEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/switchVibrarMeeting">
+            app:layout_constraintTop_toBottomOf="@id/switchVibrarSleep">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextMeetingDescription"
+                android:id="@+id/editTextSleepDescription"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/layout_height_text_input_edit_text" />
+                android:layout_height="120dp"
+                android:gravity="top|start"
+                android:inputType="textMultiLine" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonSaveAlarmMeeting"
+            android:id="@+id/buttonSaveAlarmSleep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
@@ -259,8 +238,7 @@
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textInputLayoutMeetingDescription" />
-
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutSleepDescription" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -79,7 +79,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextTreatmentName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="@dimen/layout_height_text_input_edit_text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -104,7 +104,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextStartDate"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/layout_height_text_input_edit_text"
                 android:clickable="true"
                 android:focusable="false"
                 android:inputType="none" />
@@ -132,7 +132,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextEndDate"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/layout_height_text_input_edit_text"
                 android:clickable="true"
                 android:focusable="false"
                 android:inputType="none" />
@@ -160,7 +160,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextStartHour"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/layout_height_text_input_edit_text"
                 android:clickable="true"
                 android:focusable="false"
                 android:inputType="none" />
@@ -199,7 +199,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextQuantity"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/layout_height_text_input_edit_text"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -224,7 +224,7 @@
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
                 android:id="@+id/autoCompleteTextViewUnit"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/layout_height_text_input_edit_text"
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -258,7 +258,7 @@
                 <com.google.android.material.textfield.MaterialAutoCompleteTextView
                     android:id="@+id/autoCompleteTextViewRemember"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/layout_height_text_input_edit_text"
                     android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -281,7 +281,7 @@
                 <com.google.android.material.textfield.MaterialAutoCompleteTextView
                     android:id="@+id/autoCompleteTextViewSound"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/layout_height_text_input_edit_text"
                     android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>
 

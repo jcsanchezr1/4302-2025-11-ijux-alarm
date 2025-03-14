@@ -15,6 +15,7 @@ class ListAlarmActivity : AppCompatActivity() {
     private lateinit var buttonLogOut: AppCompatImageButton
     private lateinit var buttonHeart: ImageView
     private lateinit var buttonGroup: ImageView
+    private lateinit var buttonSun: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +45,7 @@ class ListAlarmActivity : AppCompatActivity() {
         buttonLogOut = findViewById(R.id.imageButtonLogOut)
         buttonHeart = findViewById(R.id.imageViewHeart)
         buttonGroup = findViewById(R.id.imageViewGroup)
+        buttonSun = findViewById(R.id.imageViewSun)
     }
 
     private fun setupButtons() {
@@ -51,10 +53,23 @@ class ListAlarmActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
         buttonHeart.setOnClickListener {
-            startActivity(Intent(this, CreateTreatmentAlarmActivity::class.java))
+            val createTreatmentAlarmActivity =
+                Intent(this, CreateTreatmentAlarmActivity::class.java)
+            val hasAlarms = intent.getBooleanExtra("HAS_ALARMS", false)
+            createTreatmentAlarmActivity.putExtra("HAS_ALARMS", hasAlarms)
+            startActivity(createTreatmentAlarmActivity)
         }
         buttonGroup.setOnClickListener {
-            startActivity(Intent(this, CreateMeetingAlarmActivity::class.java))
+            val createMeetingAlarmActivity = Intent(this, CreateMeetingAlarmActivity::class.java)
+            val hasAlarms = intent.getBooleanExtra("HAS_ALARMS", false)
+            createMeetingAlarmActivity.putExtra("HAS_ALARMS", hasAlarms)
+            startActivity(createMeetingAlarmActivity)
+        }
+        buttonSun.setOnClickListener {
+            val createSleepAlarmActivity = Intent(this, CreateSleepAlarmActivity::class.java)
+            val hasAlarms = intent.getBooleanExtra("HAS_ALARMS", false)
+            createSleepAlarmActivity.putExtra("HAS_ALARMS", hasAlarms)
+            startActivity(createSleepAlarmActivity)
         }
     }
 }
