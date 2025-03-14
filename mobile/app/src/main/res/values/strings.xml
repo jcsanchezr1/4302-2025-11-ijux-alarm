@@ -54,6 +54,6 @@
     <string name="label_duracion_en_minutos">Duración en minutos</string>
     <string name="label_repetir">Repetir</string>
     <string name="label_descripcion">Descripción</string>
-    <string name="nombre">nombre</string>
+    <string name="label_nombre">Nombre</string>
 
 </resources>

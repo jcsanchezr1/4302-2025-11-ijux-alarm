@@ -92,7 +92,7 @@ class CreateSleepAlarmActivity : AppCompatActivity() {
     }
 
     private fun setupHints() {
-        sleepNameTextInputLayout.setHintWithAsterisk(getString(R.string.label_nombre_de_la_reunion))
+        sleepNameTextInputLayout.setHintWithAsterisk(getString(R.string.label_nombre))
         startHourSleepTextInputLayout.setHintWithAsterisk(getString(R.string.label_hora_de_inicio))
         endHourSleepTextInputLayout.setHintWithAsterisk(getString(R.string.label_hora_fin))
         repeatSleepTextInputLayout.setHintWithAsterisk(getString(R.string.label_repetir))

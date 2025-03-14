@@ -67,7 +67,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:hint="@string/nombre"
+            android:hint="@string/label_nombre"
             android:textColorHighlight="@color/purple"
             android:textColorHint="@color/purple"
             app:boxStrokeColor="@color/text_input_border"
