@@ -86,7 +86,7 @@ ng serve
 - **recuperar-contrasena:** Pantalla para recuperación de contraseña donde solicita el email
 - **registrar-usuario:** Pantalla para el registro de nuevos usuarios
 
-### Pantallas y Módulos realizados por `Julio Sanchez`
+### Pantallas y Módulos realizados por `Julio Cesar Sanchez Rodriguez`
 
 - **habilitar-deshabilitar:** Funcionalidad para habilitar y deshabilitar alarmas
 - **listar-alarmas:** Visualización y listado de alarmas existentes
