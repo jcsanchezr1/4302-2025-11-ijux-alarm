@@ -5,4 +5,6 @@
     <dimen name="textSize_alarm_card_description">12sp</dimen>
     <dimen name="textSize_alarm_card_hour">25sp</dimen>
     <dimen name="layout_height_text_input_edit_text">50sp</dimen>
+    <dimen name="padding_top_text_input_edit_text">8dp</dimen>
+    <dimen name="padding_bottom_text_input_edit_text">8dp</dimen>
 </resources>

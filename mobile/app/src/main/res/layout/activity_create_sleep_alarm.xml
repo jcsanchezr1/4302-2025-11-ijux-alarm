@@ -79,7 +79,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextSleepName"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/layout_height_text_input_edit_text" />
+                android:layout_height="@dimen/layout_height_text_input_edit_text"
+                android:paddingTop="@dimen/padding_top_text_input_edit_text"
+                android:paddingBottom="@dimen/padding_bottom_text_input_edit_text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -107,7 +109,9 @@
                 android:layout_height="@dimen/layout_height_text_input_edit_text"
                 android:clickable="true"
                 android:focusable="false"
-                android:inputType="none" />
+                android:inputType="none"
+                android:paddingTop="@dimen/padding_top_text_input_edit_text"
+                android:paddingBottom="@dimen/padding_bottom_text_input_edit_text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -135,7 +139,9 @@
                 android:layout_height="@dimen/layout_height_text_input_edit_text"
                 android:clickable="true"
                 android:focusable="false"
-                android:inputType="none" />
+                android:inputType="none"
+                android:paddingTop="@dimen/padding_top_text_input_edit_text"
+                android:paddingBottom="@dimen/padding_bottom_text_input_edit_text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -146,6 +152,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
+            android:gravity="center"
             android:hint="@string/label_repetir"
             android:textColorHighlight="@color/purple"
             android:textColorHint="@color/purple"
@@ -160,7 +167,9 @@
                 android:id="@+id/autoCompleteTextViewRepeatSleep"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/layout_height_text_input_edit_text"
-                android:inputType="none" />
+                android:inputType="none"
+                android:paddingTop="@dimen/padding_top_text_input_edit_text"
+                android:paddingBottom="@dimen/padding_bottom_text_input_edit_text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -183,7 +192,9 @@
                 android:id="@+id/autoCompleteTextViewSoundSleep"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/layout_height_text_input_edit_text"
-                android:inputType="none" />
+                android:inputType="none"
+                android:paddingTop="@dimen/padding_top_text_input_edit_text"
+                android:paddingBottom="@dimen/padding_bottom_text_input_edit_text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.materialswitch.MaterialSwitch
@@ -229,9 +240,9 @@
             android:id="@+id/buttonSaveAlarmSleep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="80dp"
+            android:layout_marginEnd="30dp"
             android:text="@string/guardar"
             android:textColor="@color/white"
             app:backgroundTint="@color/button_background"
