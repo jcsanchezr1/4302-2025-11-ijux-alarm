@@ -6,7 +6,7 @@ IjuxAlarm es la parte de la aplicación web de la plataforma IjuxAlarm, enfocada
 
 Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
 
-- Android Studio configurado y actualizado
+- Intellij IDE configurado y actualizado
 
 - Bootstrap para el diseño responsivo
 
