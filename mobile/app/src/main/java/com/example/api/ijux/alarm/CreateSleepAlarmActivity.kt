@@ -162,8 +162,8 @@ class CreateSleepAlarmActivity : AppCompatActivity() {
         val unidades = listOf(
             "No repetir",
             "Todos los días",
-            "Días laborables (Lunes a Viernes)",
-            "Fines de semana (Sábado y Domingo)"
+            "Lunes a Viernes",
+            "Sábado y Domingo"
         )
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, unidades)
         repeatSleepAutoCompleteText.setAdapter(adapter)
