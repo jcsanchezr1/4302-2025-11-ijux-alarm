@@ -1,0 +1,94 @@
+.alarmas-title-container {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #4f2380;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.form-check-label {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: #4f2380;
+}
+
+.form-check-input {
+    width: 52px;
+    height: 32px;
+    position: relative;
+    box-shadow: none; 
+    outline: none; 
+    border-width: 2px; 
+}
+
+.form-check-input:focus {
+    box-shadow: none; 
+    outline: none; 
+}
+
+.form-check-input:checked {
+    background-color: #4f2380;
+    border-color: #4f2380;
+}
+
+.form-check-input:not(:checked) {
+    background-color: #ffffff;
+    border-color: #4f2380;
+}
+
+.form-check-input:not(:checked)::before {
+    background-color: #4f2380;
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2.5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.form-check-input:checked::before {
+    transform: translateX(20px);
+}
+
+.form-check-container {
+    margin-top: 110px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-check.form-switch {
+    border: 2px solid #4f2380;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 680px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1400px) {
+    .form-check.form-switch {        
+        width: 500px;
+    }   
+}
+
+@media (max-width: 857px) {
+    .form-check.form-switch {        
+        width: 355px;
+    }
+}
