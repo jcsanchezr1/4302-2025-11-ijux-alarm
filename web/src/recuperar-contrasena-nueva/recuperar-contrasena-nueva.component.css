@@ -136,14 +136,14 @@ small {
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    width: 265px;
+    width: 345px;
     height: 160px;
     max-width: 800px;
   }
 
   .modal-content p {
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     color: #ffffff;
   }
 
@@ -153,10 +153,10 @@ small {
     background-color: transparent;
     border: 1px solid #ffffff;
     color: #ffffff;
-    padding: 5px 20px;
+    /*padding: 5px 20px;*/
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
   }
 
   .modal-content button:hover {
